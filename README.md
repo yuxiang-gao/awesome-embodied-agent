@@ -7,27 +7,27 @@
 This is more of a personal collection of papers, datasets, and benchmarks related to embodied agents. The goal is to keep track of the latest research in the field and to have a quick reference to the most relevant papers. I mainly focus on works that (IMO) have the ingredients for building a generalist embodied agent (with a focus on humanoid robots).
 
 - [🤖 Awesome-Embodied-Agent](#-awesome-embodied-agent)
-  - [Papers](#papers)
-    - [World Model](#world-model)
-      - [Diffusion](#diffusion)
-      - [Auto-regressive](#auto-regressive)
-      - [Self-supervised](#self-supervised)
+  - [📃 Papers](#-papers)
+    - [🌏 World Model](#-world-model)
+      - [🌈 Diffusion](#-diffusion)
+      - [➡️ Auto-regressive](#️-auto-regressive)
+      - [🦾 Self-supervised](#-self-supervised)
       - [Others](#others)
-    - [Generation-conditioned](#generation-conditioned)
-    - [VLA](#vla)
-    - [Imitation Learning](#imitation-learning)
-      - [Diffusion-based](#diffusion-based)
-    - [Reinforcement Learning](#reinforcement-learning)
-    - [Survey](#survey)
-  - [Datasets](#datasets)
-  - [Benchmarks](#benchmarks)
-  - [Thoughts](#thoughts)
+    - [🗺️ Generation-conditioned](#️-generation-conditioned)
+    - [🤖 VLA](#-vla)
+    - [🐒 Imitation Learning](#-imitation-learning)
+      - [🌈 Diffusion-based](#-diffusion-based)
+    - [🎪 Reinforcement Learning](#-reinforcement-learning)
+    - [🧙 Survey](#-survey)
+  - [💽 Datasets](#-datasets)
+  - [🏋️ Benchmarks](#️-benchmarks)
+  - [🧠 Thoughts](#-thoughts)
 
-## Papers
+## 📃 Papers
 
-### World Model
+### 🌏 World Model
 
-#### Diffusion
+#### 🌈 Diffusion
 
 - **Towards Physical Understanding in Video Generation: A 3D Point Regularization Approach**
 Yunuo Chen1,2*, Junli Cao1,2, Anil Kag2, Vidit Goel2, Sergei Korolev2, Chenfanfu Jiang1, Sergey Tulyakov2, Jian Ren2
@@ -39,10 +39,11 @@ Yunuo Chen1,2*, Junli Cao1,2, Anil Kag2, Vidit Goel2, Sergei Korolev2, Chenfanfu
   > - cross attention between video and point in corresponding channels for a better alignment between the two modalities.
   > - applying a **misalignment penalty** to the video diffusion process
 
-  > [!NOTE]
-  > This could be useful for our data since hey are naturally annotated with ee-pose and finger-tips can be calculated from joint positions.
+> [!NOTE]
+>
+> This could be useful for our data since hey are naturally annotated with ee-pose and finger-tips can be calculated from joint positions.
 
-#### Auto-regressive
+#### ➡️ Auto-regressive
 
 - **Learning Robotic Video Dynamics with Heterogeneous Masked Autoregression**
 Lirui Wang, Kevin Zhao*, Chaoqi Liu*, Xinlei Chen, MIT, UIUC, FAIR Meta, 2025
@@ -54,10 +55,11 @@ Lirui Wang, Kevin Zhao*, Chaoqi Liu*, Xinlei Chen, MIT, UIUC, FAIR Meta, 2025
   > - pretrained video dynamic models from hetereogeneous data over 40 datasets and 3 million trajectories from real robot teleops, human videos, simulation
   > - token **concatenation and modulaton** for action conditioned masked autoregressive video and action generation
 
-  > [!NOTE]
-  > [Lirui's](https://liruiw.github.io/) new work, which uses a cross-attention stem and head architecture similar to HPT, bu this one focuses on action-conditioned generation.
+> [!NOTE]
+>
+> [Lirui's](https://liruiw.github.io/) new work, which uses a cross-attention stem and head architecture similar to HPT, bu this one focuses on action-conditioned generation.
 
-#### Self-supervised
+#### 🦾 Self-supervised
 
 - **Intuitive physics understanding emerges from self-supervised pretraining on natural videos**
 Quentin Garrido, Nicolas Ballas, Mahmoud Assran, Adrien Bardes, Laurent Najman, Michael Rabbat, Emmanuel Dupoux, Yann LeCun. 2025
@@ -72,8 +74,9 @@ Quentin Garrido, Nicolas Ballas, Mahmoud Assran, Adrien Bardes, Laurent Najman, 
   > - GRASP
   > - InfLevel-lab
 
-  > [!NOTE]  
-  > This paper also focuses on physical understanding, but it uses a self-supervised learning approach. It is interesting to see how the model can be used for embodied agents.
+> [!NOTE]  
+>
+> This paper also focuses on physical understanding, but it uses a self-supervised learning approach. It is interesting to see how the model can be used for embodied agents.
 
 - **DINO-Foresight: Looking into the Future with DINO**
 Efstathios Karypidis, Ioannis Kakogeorgiou, Spyros Gidaris, Nikos Komodakis, 2024
@@ -95,7 +98,7 @@ Kensuke Nakamura, Lasse Peters, Andrea Bajcsy, 2025
 > - Latent Safety Filters: a latent-space generalization of HJ reachability that tractably operates directly on raw observation data (e.g., RGB images) by performing safety analysis in the latent embedding space of a generative world model.
 > - Prevent unsafe states and generate actions that prevent future failures in latent space.
 
-### Generation-conditioned
+### 🗺️ Generation-conditioned
 
 - **Video Prediction Policy: A Generalist Robot Policy with Predictive Visual Representations**
 Yucheng Hu, Yanjiang Guo, Pengchao Wang, Xiaoyu Chen, Yen-Jen Wang, Jianke Zhang, Koushil Sreenath, Chaochao Lu, Jianyu Chen, 2024
@@ -105,7 +108,7 @@ Yucheng Hu, Yanjiang Guo, Pengchao Wang, Xiaoyu Chen, Yen-Jen Wang, Jianke Zhang
 Han Qi, Haocheng Yin, Yilun Du, Heng Yang, School of Engineering and Applied Sciences, Harvard University,  2025
 [[paper](https://arxiv.org/abs/2502.00622)][[project](https://computationalrobotics.seas.harvard.edu/GPC/)][code coming soon]
 
-### VLA
+### 🤖 VLA
 
 - **HELIX: A VISION-LANGUAGE-ACTION MODEL FOR GENERALIST HUMANOID CONTROL**
 [[blog](https://www.figure.ai/news/helix)]
@@ -117,12 +120,13 @@ Han Qi, Haocheng Yin, Yilun Du, Heng Yang, School of Engineering and Applied Sci
   > - multi-robot, multi-operator dataset of diverse teleoperated behaviors, ~500 hours in total.
   > - an auto-labeling VLM to generate hindsight instructions, prompted with: "What instruction would you have given the robot to get the action seen in this video?"
 
-  > [!NOTE]  
-  > Similar Work:
-  >
-  > - [HiRT](https://arxiv.org/pdf/2410.05273)
-  > - [Latent code as bridge](https://arxiv.org/pdf/2405.04798)
-  > - [RoboDual](https://arxiv.org/pdf/2410.08001)
+> [!NOTE]
+>
+> Similar Work:
+>
+> - [HiRT](https://arxiv.org/pdf/2410.05273)
+> - [Latent code as bridge](https://arxiv.org/pdf/2405.04798)
+> - [RoboDual](https://arxiv.org/pdf/2410.08001)
 
 - **π0: A Vision-Language-Action Flow Model for General Robot Control**
   Physical Intelligence
@@ -178,31 +182,32 @@ Han Qi, Haocheng Yin, Yilun Du, Heng Yang, School of Engineering and Applied Sci
   >
   > staged training strategies
 
-### Imitation Learning
+### 🐒 Imitation Learning
 
-#### Diffusion-based
+#### 🌈 Diffusion-based
 
 - **Scaling Diffusion Policy in Transformer to 1 Billion Parameters for Robotic Manipulation ( ScaleDP )**<a name="scale-dp"></a>
   Minjie Zhu, Yichen Zhu, Jinming Li, Junjie Wen, Zhiyuan Xu, Ning Liu, Ran Cheng, Chaomin Shen, Yaxin Peng, Feifei Feng, Jian Tang, 2024
   [[paper](https://arxiv.org/abs/2409.14411)]
 
-> - DPT suffers from large gradient issues, making the optimization of Diffusion Policy unstable
->   - factorize the
-feature embedding of observation into multiple affine layers, and integrate it into the transformer blocks
->   - non-causal attention which allows the policy network to “see” future actions during prediction
->
-> Obs:
->
-> - for DP-T increasing size does not improve performance
-> - num head 4->6 improves performance, but 8 does not
-> - a consistent decline in performance with each additional layer
+  > - DPT suffers from large gradient issues, making the optimization of Diffusion Policy unstable
+  >   - factorize the
+  feature embedding of observation into multiple affine layers, and integrate it into the transformer blocks
+  >   - non-causal attention which allows the policy network to “see” future actions during prediction
+  >
+  > Obs:
+  >
+  > - for DP-T increasing size does not improve performance
+  > - num head 4->6 improves performance, but 8 does not
+  > - a consistent decline in performance with each additional layer
 
-> Key Modifications:
->
-> - AdaLN block instead of cross-attention block
-> - Non-causal Attention: remove the causal mask in the self-attention layer
+  > Key Modifications:
+  >
+  > - AdaLN block instead of cross-attention block
+  > - Non-causal Attention: remove the causal mask in the self-attention layer
 
 > [!NOTE]
+>
 > RDT uses DiT with:
 >
 > - ~~RMSNorm~~ QKNorm:  avoid numerical instability
@@ -213,22 +218,22 @@ feature embedding of observation into multiple affine layers, and integrate it i
 Sudeep Dasari, Oier Mees, Sebastian Zhao, Mohan Kumar Srirama, Sergey Levine, 2024
 [[paper](https://arxiv.org/pdf/2410.10088)][[code](https://github.com/sudeepdasari/dit-policy)]
 
-> DiT policy
->
-> - FiLM + resnet + sinusoidal fourier features
-> - adaLN-Zero attention: This simple trick improves performance by 30\%+ on long horizon, dexterous, real-world manipulation tasks containing over 1000 decisions!
-> - self-attention encoder + diffusion decoder with adaLN-Zero
+  > DiT policy
+  >
+  > - FiLM + resnet + sinusoidal fourier features
+  > - adaLN-Zero attention: This simple trick improves performance by 30\%+ on long horizon, dexterous, real-world manipulation tasks containing over 1000 decisions!
+  > - self-attention encoder + diffusion decoder with adaLN-Zero
 
 - [Decoder Only Transformer Policy - simple but powerful model for behavioral cloning](https://github.com/IliaLarchenko/dot_policy)
 
-  > [!NOTE]
-  > very interesting idea about simplifying IL models (14M parameters with 2-3M trainable). It is worth to try it on our data.
-  > However, the reported results are only on simulated envs.
+> [!NOTE]
+> very interesting idea about simplifying IL models (14M parameters with 2-3M trainable). It is worth to try it on our data.
+> However, the reported results are only on simulated envs.
 
-  > [!IMPORTANT]
-  > Overall, I think a minimalist IL model that we can run in realtime on CPU is needed. Coupled with VLM for high-level reasoning, this could be a good stand-in for the full VLA model.
+> [!IMPORTANT]
+> Overall, I think a minimalist IL model that we can run in realtime on CPU is needed. Coupled with VLM for high-level reasoning, this could be a good stand-in for the full VLA model.
 
-### Reinforcement Learning
+### 🎪 Reinforcement Learning
 
 - **Learning to Manipulate Anywhere: A Visual Genralizable Framework For Visual Reinforcement Learning**
 Zhecheng Yuan, Tianming Wei, Shuiqi Cheng, Gu Zhang, Yuanpei Chen, Huazhe Xu, 2024
@@ -236,13 +241,13 @@ Zhecheng Yuan, Tianming Wei, Shuiqi Cheng, Gu Zhang, Yuanpei Chen, Huazhe Xu, 20
 
   > Use multi-view representation objective to help sim-to-real transfer
 
-### Survey
+### 🧙 Survey
 
 - **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, arXiv:2407.06886, 2024
 Yang Liu, Weixing Chen, Yongjie Bai, Guanbin Li, Wen Gao, Liang Lin.
 [[Paper](https://arxiv.org/pdf/2407.06886)]
 
-## Datasets
+## 💽 Datasets
 
 - **Open-X Embodiment**
 [[overview](https://docs.google.com/spreadsheets/d/1rPBD77tk60AEIGZrGSODwyyzs5FgCU9Uz3h-3_t2A9g/edit?gid=0#gid=0)]
@@ -263,7 +268,7 @@ Homer Walke, Kevin Black, Abraham Lee, Moo Jin Kim, Max Du, Chongyi Zheng, Tony 
 - **DROID: A Large-Scale In-the-Wild Robot Manipulation Dataset**, 2024
 [[paper](https://arxiv.org/abs/2403.12945)][[project](https://droid-dataset.github.io/)]
 
-## Benchmarks
+## 🏋️ Benchmarks
 
 - **All Robots in One: A New Standard and Unified Dataset for Versatile, General-Purpose Embodied Agents**, arXiv:2408.10899, 2024
 Zhiqiang Wang, Hao Zheng, Yunshuang Nie, Wenjun Xu, Qingwei Wang, Hua Ye, Zhe Li, Kaidong Zhang, Xuewen Cheng, Wanxi Dong, Chang Cai, Liang Lin, Feng Zheng, Xiaodan Liang
@@ -273,4 +278,4 @@ Zhiqiang Wang, Hao Zheng, Yunshuang Nie, Wenjun Xu, Qingwei Wang, Hua Ye, Zhe Li
 Oier Mees, Lukas Hermann, Erick Rosete, Wolfram Burgard
 [[paper](https://arxiv.org/pdf/2112.03227)][[project](https://github.com/mees/calvin)]
 
-## Thoughts
+## 🧠 Thoughts

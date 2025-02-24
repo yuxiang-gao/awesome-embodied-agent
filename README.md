@@ -20,6 +20,7 @@ This is more of a personal collection of papers, datasets, and benchmarks relate
     - [🎪 Reinforcement Learning](#-reinforcement-learning)
     - [🧙 Survey](#-survey)
   - [💽 Datasets](#-datasets)
+    - [🧠 Real2sim](#-real2sim)
   - [🏋️ Benchmarks](#️-benchmarks)
   - [🧠 Thoughts](#-thoughts)
 
@@ -240,7 +241,7 @@ Zhecheng Yuan, Tianming Wei, Shuiqi Cheng, Gu Zhang, Yuanpei Chen, Huazhe Xu, 20
 [[paper](https://arxiv.org/abs/2407.15815)][[project](https://gemcollector.github.io/maniwhere/)][[code](https://github.com/gemcollector/maniwhere)]
 
   > Use multi-view representation objective to help sim-to-real transfer
-
+  
 ### 🧙 Survey
 
 - **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, arXiv:2407.06886, 2024
@@ -267,6 +268,15 @@ Homer Walke, Kevin Black, Abraham Lee, Moo Jin Kim, Max Du, Chongyi Zheng, Tony 
 
 - **DROID: A Large-Scale In-the-Wild Robot Manipulation Dataset**, 2024
 [[paper](https://arxiv.org/abs/2403.12945)][[project](https://droid-dataset.github.io/)]
+
+### 🧠 Real2sim
+
+- **Re3Sim: Generating High-Fidelity Simulation Data via 3D-Photorealistic Real-to-Sim for Robotic Manipulation**
+Xiaoshen Han, Minghuan Liu, Yilun Chen, Junqiu Yu, Xiaoyang Lyu, Yang Tian, Bolun Wang, Weinan Zhang, Jiangmiao Pang, 2025
+[[paper](https://arxiv.org/abs/2502.08645)][[project](https://xshenhan.github.io/Re3Sim/)]
+
+-- **Evaluating Real-World Robot Manipulation Policies in Simulation (SimplerEnv)**
+[[paper](https://arxiv.org/pdf/2405.05941)][[project](https://simpler-env.github.io/)]
 
 ## 🏋️ Benchmarks
 

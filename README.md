@@ -241,7 +241,13 @@ Zhecheng Yuan, Tianming Wei, Shuiqi Cheng, Gu Zhang, Yuanpei Chen, Huazhe Xu, 20
 [[paper](https://arxiv.org/abs/2407.15815)][[project](https://gemcollector.github.io/maniwhere/)][[code](https://github.com/gemcollector/maniwhere)]
 
   > Use multi-view representation objective to help sim-to-real transfer
-  
+
+- **Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning**
+Jianlan Luo, Charles Xu, Jeffrey Wu, Sergey Levine, 2024
+[[paper](https://hil-serl.github.io/static/hil-serl-paper.pdf)][[code](https://github.com/rail-berkeley/hil-serl)]
+
+  > - Human-in-the-loop RL
+
 ### 🧙 Survey
 
 - **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, arXiv:2407.06886, 2024
@@ -275,7 +281,7 @@ Homer Walke, Kevin Black, Abraham Lee, Moo Jin Kim, Max Du, Chongyi Zheng, Tony 
 Xiaoshen Han, Minghuan Liu, Yilun Chen, Junqiu Yu, Xiaoyang Lyu, Yang Tian, Bolun Wang, Weinan Zhang, Jiangmiao Pang, 2025
 [[paper](https://arxiv.org/abs/2502.08645)][[project](https://xshenhan.github.io/Re3Sim/)]
 
--- **Evaluating Real-World Robot Manipulation Policies in Simulation (SimplerEnv)**
+- **Evaluating Real-World Robot Manipulation Policies in Simulation (SimplerEnv)**
 [[paper](https://arxiv.org/pdf/2405.05941)][[project](https://simpler-env.github.io/)]
 
 ## 🏋️ Benchmarks

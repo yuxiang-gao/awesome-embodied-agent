@@ -1,10 +1,12 @@
-# Awesome-Embodied-Agent
+# 🤖 Awesome-Embodied-Agent
 
 ---
 
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-- [Awesome-Embodied-Agent](#awesome-embodied-agent)
+This is more of a personal collection of papers, datasets, and benchmarks related to embodied agents. The goal is to keep track of the latest research in the field and to have a quick reference to the most relevant papers. I mainly focus on works that (IMO) have the ingredients for building a generalist embodied agent (with a focus on humanoid robots).
+
+- [🤖 Awesome-Embodied-Agent](#-awesome-embodied-agent)
   - [Papers](#papers)
     - [World Model](#world-model)
       - [Diffusion](#diffusion)

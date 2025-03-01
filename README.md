@@ -18,8 +18,10 @@ This is more of a personal collection of papers, datasets, and benchmarks relate
     - [🐒 Imitation Learning](#-imitation-learning)
       - [🌈 Diffusion-based](#-diffusion-based)
     - [🎪 Reinforcement Learning](#-reinforcement-learning)
+    - [🪩 Other Modalities](#-other-modalities)
     - [🧙 Survey](#-survey)
   - [💽 Datasets](#-datasets)
+    - [🔍 Dataset Evaluation](#-dataset-evaluation)
     - [🧠 Real2sim](#-real2sim)
   - [🏋️ Benchmarks](#️-benchmarks)
   - [🧠 Thoughts](#-thoughts)
@@ -248,6 +250,22 @@ Jianlan Luo, Charles Xu, Jeffrey Wu, Sergey Levine, 2024
 
   > - Human-in-the-loop RL
 
+### 🪩 Other Modalities
+
+- **V-HOP: Visuo-Haptic 6D Object Pose Tracking**
+Hongyu Li, Mingxi Jia, Tuluhan Akbulut, Yu Xiang, George Konidaris, Srinath Sridhar, 2025
+[[paper](https://arxiv.org/abs/2502.17434)]
+
+  > - a novel unified haptic representation that effectively handles multiple gripper embodiments.
+  > - a new visuo-haptic transformer-based object pose tracker that seamlessly integrates visual and haptic input
+
+- **FACTR: Force-Attending Curriculum Training for Contact-Rich Policy Learning**
+[Jason Jingzhou Liu](https://jasonjzliu.com), Yulong Li, Kenneth Shaw, Tony Tao, Ruslan Salakhutdinov, [Deepak Pathak](https://www.cs.cmu.edu/~dpathak/), 2025
+[[paper](https://arxiv.org/abs/2502.17432)][[project](https://jasonjzliu.com/factr/)]
+
+  > - a low-cost, intuitive, bilateral teleoperation setup that relays external forces of the follower arm back to the teacher arm, facilitating data collection for complex, contact-rich tasks
+  > - FACTR, a policy learning method that employs a curriculum which corrupts the visual input with decreasing intensity throughout training.
+  >
 ### 🧙 Survey
 
 - **Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI**, arXiv:2407.06886, 2024
@@ -274,6 +292,16 @@ Homer Walke, Kevin Black, Abraham Lee, Moo Jin Kim, Max Du, Chongyi Zheng, Tony 
 
 - **DROID: A Large-Scale In-the-Wild Robot Manipulation Dataset**, 2024
 [[paper](https://arxiv.org/abs/2403.12945)][[project](https://droid-dataset.github.io/)]
+
+### 🔍 Dataset Evaluation
+
+- **Robot Data Curation with Mutual Information Estimators**
+Joey Hejna, Suvir Mirchandani, Ashwin Balakrishna, Annie Xie, Ayzaan Wahid, Jonathan Tompson, Pannag Sanketi, Dhruv Shah, Coline Devin, Dorsa Sadigh, 2025
+[[paper](https://arxiv.org/abs/2502.08623)][[project](https://joeyhejna.com/demonstration-info/)][[code](https://github.com/jhejna/demonstration-information)]
+
+- **Re-Mix: Optimizing Data Mixtures for Large Scale Imitation Learning**
+Joey Hejna, Chethan Bhateja, Yichen Jiang, Karl Pertsch, Dorsa Sadigh, 2024
+[[paper](https://arxiv.org/abs/2408.14037)][[project](https://github.com/jhejna/remix)]
 
 ### 🧠 Real2sim
 

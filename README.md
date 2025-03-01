@@ -238,6 +238,17 @@ Sudeep Dasari, Oier Mees, Sebastian Zhao, Mohan Kumar Srirama, Sergey Levine, 20
 
 ### 🎪 Reinforcement Learning
 
+- **Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids**
+Toru Lin, Kartik Sachdev, Linxi Fan, Jitendra Malik, Yuke Zhu，2025
+[[paper](https://arxiv.org/abs/2502.20396)][[project](https://toruowo.github.io/recipe/)]
+
+> Challenges in applying RL to manipulation:
+>
+> - *Challenge in environment modeling*: an automated **real-to-sim tuning module** that brings the simulated environment closer to the real world
+> - *Challenge in reward design*: a **generalized reward design scheme** that simplifies reward engineering for long-horizon contact-rich manipulation tasks -- *disentangle a full task into intermediate “contact goals” and “object goals”*.
+> - *Challenge in policy learning*: a divide-and-conquer distillation process that improves the sample efficiency of hard-exploration problems while maintaining sim-to-real performance
+> - *Challenge in object perception*: a mixture of sparse and dense object representations to bridge the sim-to-real perception gap.
+
 - **Learning to Manipulate Anywhere: A Visual Genralizable Framework For Visual Reinforcement Learning**
 Zhecheng Yuan, Tianming Wei, Shuiqi Cheng, Gu Zhang, Yuanpei Chen, Huazhe Xu, 2024
 [[paper](https://arxiv.org/abs/2407.15815)][[project](https://gemcollector.github.io/maniwhere/)][[code](https://github.com/gemcollector/maniwhere)]

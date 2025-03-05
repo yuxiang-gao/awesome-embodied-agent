@@ -17,7 +17,10 @@ This is more of a personal collection of papers, datasets, and benchmarks relate
     - [🤖 VLA](#-vla)
     - [🐒 Imitation Learning](#-imitation-learning)
       - [🌈 Diffusion-based](#-diffusion-based)
+        - [Consistency Policy](#consistency-policy)
+      - [Auto-regressive](#auto-regressive)
     - [🎪 Reinforcement Learning](#-reinforcement-learning)
+    - [🎁 Representations](#-representations)
     - [🪩 Other Modalities](#-other-modalities)
     - [🧙 Survey](#-survey)
   - [💽 Datasets](#-datasets)
@@ -112,6 +115,16 @@ Han Qi, Haocheng Yin, Yilun Du, Heng Yang, School of Engineering and Applied Sci
 [[paper](https://arxiv.org/abs/2502.00622)][[project](https://computationalrobotics.seas.harvard.edu/GPC/)][code coming soon]
 
 ### 🤖 VLA
+
+- **ObjectVLA: End-to-End Open-World Object Manipulation Without Demonstration**
+Minjie Zhu, Yichen Zhu, Jinming Li, Zhongyi Zhou, Junjie Wen, Xiaoyu Liu, Chaomin Shen, Yaxin Peng, Feifei Feng, 2025
+[[paper](https://arxiv.org/abs/2502.19250)]
+  > - “<|object ref start|>{object}<|object ref end|><|box start|> (x1, y1),(x2, y2)<|box end|>.”
+  > - 10:1 data ratio (robot-to-image-text data): This ratio empirically proved sufficient for robust object generalization, aligning with prior findings on the benefits of co-training for VLA capabilities. Notably, increasing the proportion of robot data beyond this ratio led to a decline in in-domain task success rates. We hypothesize this stems from the limited capacity of the 2B-parameter DiVLA model compared to larger architectures like ECoT (7B) and RT-2 (55B), which can better absorb domain-specific data without overfitting.
+
+  - **Diffusion-VLA: Scaling Robot Foundation Models via Unified Diffusion and Autoregression**
+  Junjie Wen, Minjie Zhu, Yichen Zhu, Zhibin Tang, Jinming Li, Zhongyi Zhou, Chengmeng Li, Xiaoyu Liu, Yaxin Peng, Chaomin Shen, Feifei Feng, 2024
+  [[paper](https://arxiv.org/abs/2412.03293)]
 
 - **HELIX: A VISION-LANGUAGE-ACTION MODEL FOR GENERALIST HUMANOID CONTROL**
 [[blog](https://www.figure.ai/news/helix)]
@@ -227,6 +240,18 @@ Sudeep Dasari, Oier Mees, Sebastian Zhao, Mohan Kumar Srirama, Sergey Levine, 20
   > - adaLN-Zero attention: This simple trick improves performance by 30\%+ on long horizon, dexterous, real-world manipulation tasks containing over 1000 decisions!
   > - self-attention encoder + diffusion decoder with adaLN-Zero
 
+##### Consistency Policy
+
+- **Boosting Continuous Control with Consistency Policy**
+Yuhui Chen, Haoran Li, Dongbin Zhao, 2024
+[[paper](https://arxiv.org/abs/2310.06343)][[project](https://consistency-policy.github.io)][[code](https://github.com/Aaditya-Prasad/Consistency-Policy/)]
+
+- **Consistency Policy: Accelerated Visuomotor Policies via Consistency Distillation**
+Aaditya Prasad, Kevin Lin, Jimmy Wu, Linqi Zhou, Jeannette Bohg, 2024
+[[paper](https://arxiv.org/abs/2405.07503)]
+
+#### Auto-regressive
+
 - [Decoder Only Transformer Policy - simple but powerful model for behavioral cloning](https://github.com/IliaLarchenko/dot_policy)
 
 > [!NOTE]
@@ -236,7 +261,18 @@ Sudeep Dasari, Oier Mees, Sebastian Zhao, Mohan Kumar Srirama, Sergey Levine, 20
 > [!IMPORTANT]
 > Overall, I think a minimalist IL model that we can run in realtime on CPU is needed. Coupled with VLM for high-level reasoning, this could be a good stand-in for the full VLA model.
 
+- **CARP: Visuomotor Policy Learning via Coarse-to-Fine Autoregressive Prediction**
+Zhefei Gong, Pengxiang Ding, Shangke Lyu, Siteng Huang, Mingyang Sun, Wei Zhao, Zhaoxin Fan, Donglin Wang, 2024
+[[paper](https://arxiv.org/abs/2412.06782)][[code](https://github.com/ZhefeiGong/carp?tab=readme-ov-file)]
+
 ### 🎪 Reinforcement Learning
+
+- **ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy**
+Yuhui Chen, Shuai Tian, Shugao Liu, Yingting Zhou, Haoran Li, Dongbin Zhao, 2025
+[[paper](https://arxiv.org/pdf/2502.05450)]
+
+> offline and online fine-tuning with a unified consistency-based training objective
+> evaluate our approach on eight diverse real-world manipulation tasks. It achieves an average success rate of 96.3 % within 45–90 minutes of online fine-tuning, outperforming prior supervised methods with a 144 % improvement in success rate and 1.9x shorter episode length.
 
 - **Sim-to-Real Reinforcement Learning for Vision-Based Dexterous Manipulation on Humanoids**
 Toru Lin, Kartik Sachdev, Linxi Fan, Jitendra Malik, Yuke Zhu，2025
@@ -245,9 +281,11 @@ Toru Lin, Kartik Sachdev, Linxi Fan, Jitendra Malik, Yuke Zhu，2025
 > Challenges in applying RL to manipulation:
 >
 > - *Challenge in environment modeling*: an automated **real-to-sim tuning module** that brings the simulated environment closer to the real world
+>   - autotune module: simulator physics parameters affecting kinematics and dynamics, as well as robot model constants from the URDF file (including link inertia values, joint limits, and joint/link poses).
 > - *Challenge in reward design*: a **generalized reward design scheme** that simplifies reward engineering for long-horizon contact-rich manipulation tasks -- *disentangle a full task into intermediate “contact goals” and “object goals”*.
 > - *Challenge in policy learning*: a divide-and-conquer distillation process that improves the sample efficiency of hard-exploration problems while maintaining sim-to-real performance
 > - *Challenge in object perception*: a mixture of sparse and dense object representations to bridge the sim-to-real perception gap.
+>
 
 - **Learning to Manipulate Anywhere: A Visual Genralizable Framework For Visual Reinforcement Learning**
 Zhecheng Yuan, Tianming Wei, Shuiqi Cheng, Gu Zhang, Yuanpei Chen, Huazhe Xu, 2024
@@ -260,6 +298,18 @@ Jianlan Luo, Charles Xu, Jeffrey Wu, Sergey Levine, 2024
 [[paper](https://hil-serl.github.io/static/hil-serl-paper.pdf)][[code](https://github.com/rail-berkeley/hil-serl)]
 
   > - Human-in-the-loop RL
+
+### 🎁 Representations
+
+- **SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation**
+Zekun Qi, Wenyao Zhang, Yufei Ding, Runpei Dong, Xinqiang Yu, Jingwen Li, Lingyun Xu, Baoyu Li, Xialin He, Guofan Fan, Jiazhao Zhang, Jiawei He, Jiayuan Gu, Xin Jin, Kaisheng Ma, Zhizheng Zhang, He Wang, Li Yi, 2025
+[[paper](https://arxiv.org/abs/2502.13143)][[project](https://qizekun.github.io/sofar/)]
+
+  > 1. Complex robotic manipulation tasks are constrained by the understanding of orientation, such as "upright a tilted wine glass", or "plugging a cord into a power strip."
+  > 2. We introduce the concept of semantic orientation, representing the object orientation condition on open vocabulary language. Such as the orientation of "top," "handle," and "pouring water."
+  > 3. We construct OrienText300K, a large paired dataset of point clouds, text, and orientation. We trained PointSO, the first Open-Vocabulary Orientation Model.
+  > 4. Based on PointSO, we propose SoFar, the first 6-DoF spatial understanding LLM, which achieves a 13.1% performance improvement on the 6-DoF object rearrangement task and a 47.2% improvement over OpenVLA on the SimplerEnv benchmark.
+  > 5. We propose two benchmarks, Open6DOR V2 and 6-DoF SpatialBench, which evaluate 6-DoF rearrangement capability and 6-DoF spatial understanding capability, respectively.
 
 ### 🪩 Other Modalities
 
